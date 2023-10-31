@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATF - výuka psaní všemi desti</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="top">
+    <p>ATF Online</p>
+    <p id="username">ATF Online</p>
+  </div>
+  <div id="modes">
+    <div></div>
+    <ul>
+      <li>Profil</li>
+      <li>Klávesnice</li>
+      <li id="modes__selected">Výuka CS Qwerty</li>
+      <li>Výuka v editoru</li>
+      <li>Výuka hravě</li>
+      <li>RSS texty</li>
+      <li>Třídy</li>
+      <li>Skupiny</li>
+      <li>Možnosti</li>
+    </ul>
+    <div id="modes__right">
+      <img src="https://www.atfonline.cz/img/bluehand.png"/>
+      <img src="https://www.atfonline.cz/img/button/smallHelpAtf.png"/>
+    </div>
+  </div>
+  <div id="settings">
+    <div>
+      <div id="basic__texts">
+        <div id="basic__texts__left">        
+          <div id="icon">
+            <img src="https://www.atfonline.cz/img/button/prevSnap.png"/>
+            <p>Předchozí snímek</p>
+          </div>
+          <div id="icon">
+            <img src="https://www.atfonline.cz/img/button/nextSnap.png"/>
+            <p>Následující snímek</p>
+          </div>
+        </div>
+        <div id="basic__texts__right">
+          <p>PEK 1</p>
+          <select id="select" class="lection" onchange="generateResults()">
+            <option value="1">Lekce 1 {dfjk}</option>
+            <option value="2">Lekce 2 {aů}</option>
+            <option value="5">Lekce 5 {i,}</option> 
+            <option value="14">Lekce 14 {ú}</option>
+          </select>
+          <select id="select">
+            <option value="1">Hmaty</option>
+            <option value="2">Slova</option>
+            <option value="3">Věty</option>
+          </select>
+        </div>
+      </div>
+      <p id="bottom__text">Základní texty</p>
+    </div>
+    <div>
+      <div id="icon">
+        <img src="https://www.atfonline.cz/img/button/fileSnap.png">
+        <p>Snímek ze souboru</p>
+      </div>
+      <p id="bottom__text">Volné texty</p>
+    </div>
+    <div>
+      <div id="flex">
+        <div id="icon">
+         <img src="https://www.atfonline.cz/img/button/repeatSnap.png">
+         <p>Opakovat snímek</p>
+       </div>
+       <div>
+         <div id="icon">
+          <img src="https://www.atfonline.cz/img/button/timeSnap.png">
+        </div>
+        <select id="select">
+          <option value="1">1 min</option>
+          <option value="2">2 min</option>
+          <option value="3">3 min</option>
+          <option value="4">4 min</option>
+          <option value="5">5 min</option>
+          <option value="6">6 min</option>
+          <option value="7">7 min</option>
+          <option value="8">8 min</option>
+          <option value="9">9 min</option>
+          <option value="10">10 min</option>
+          <option value="11">11 min</option>
+          <option value="12">12 min</option>
+          <option value="13">13 min</option>
+          <option value="14">14 min</option>
+          <option value="15">15 min</option>
+        </select>
+       </div>
+      </div>
+      <p id="bottom__text">Psaní</p>
+    </div>
+    <div>
+      <div id="flex">
+        <div id="icon">
+          <img src="https://www.atfonline.cz/img/button/reverseSnap.png">
+          <p>Snímek pozpátku</p>
+        </div>
+        <div id="icon">
+          <img src="https://www.atfonline.cz/img/button/errorSnap.png">
+          <p>Snímek chybná slova</p>
+        </div>
+      </div>
+      <p id="bottom__text">Procvičování</p>
+    </div>
+    <div id="nastaveni">
+      <div id="flex">
+        <input type="checkbox" />
+        <p id="small">Oprava znaku po chybě</p>
+      </div>
+      <div id="flex">
+        <input type="checkbox" />
+        <p id="small">Generování slov a vět</p>
+      </div>
+      <div id="flex">
+        <input type="checkbox" />
+        <p id="small">Tón po chybě</p>
+      </div>
+      <p id="bottom__text">Nastavení</p>
+    </div>
+    <div>
+      <div id="flex">
+        <input type="checkbox" />
+        <p>Zvuk</p>
+      </div>
+      <div id="flex">
+        <input type="checkbox" />
+        <p>Pohyb</p>
+      </div>
+      <div id="flex">
+        <input type="text" id="metronom__input">
+        <p>[úh/min]</p>
+      </div>
+      <p id="bottom__text">Metronom</p>
+    </div>
+    <div>
+      <select id="select">
+        <option value="Courier">Courier New</option>
+        <option value="Consolas">Consolas</option>
+      </select>
+      <div id="flex">
+        <img src="https://www.atfonline.cz/img/button/fontBold.png"/>
+        <img src="https://www.atfonline.cz/img/button/fontItalic.png"/>
+        <select id="select">
+          <option value="12">12</option>
+          <option value="14">14</option>
+          <option value="16">16</option>
+          <option value="18">18</option>
+          <option value="20">20</option>
+          <option value="22">22</option>
+          <option value="24">24</option>
+          <option value="26">26</option>
+        </select>
+      </div>
+      <p id="bottom__text">Písmo</p>
+    </div>
+  </div>
+  <div id="title__div">
+    <div></div>
+    <p id="title">Lekce 14 - Věty = Snímek 1/1 [306, 0.00]</p>
+    <div class="right">
+      <img src="https://www.atfonline.cz/img/smone.png"/>
+    </div>
+  </div> 
+  <div class="wrapper">
+    <div id="main">
+      <div id="container">
+        <p id="cur__text">dusil sil, klid klidu, dusil sil, dusili dusil dusil sil, klasik klasik, radil jsi</p>
+        <input id="text__input" type="text" onkeyup="updateScreenText()">
+        <p id="remaining__text">laik, laiků, dusili sili, laik, laiků, klasik, klasiků, radil jsi, klid klidu, lidu, radil jsi, lid lidu, dusili dusil sil, klid klidu, dali ji, dusil</p>
+      </div>
+      <div id="results">
+        <p class="results__text" id="wrong__count">Počet chyb: </p>
+        <div id="flex">
+          <p class="results__text" id="speed">Rychlost: </p>
+          <p class="results__text" id="wrongness">Chybovost: </p>
+        </div>
+        <div id="flex">
+          <p class="results__text" id="wrong__chars">Chybné znaky: </p>
+          <p class="results__text" id="slowest__chars">Nejpomalejší znaky: </p>
+        </div>
+      </div>
+      <div id="bottom">
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
