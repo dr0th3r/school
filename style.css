@@ -27,7 +27,7 @@
 
 p {
   color: #11449e;
-  font-size:14px;
+  font-size:12px;
   font-weight: bold;
 }
 
@@ -98,7 +98,8 @@ p {
   text-align: center;
   color: #576aaa;
   font-size: 12px;
-  background-color: lightgray;
+  background-color: rgb(191, 202, 212);
+  align-self: flex-end;
 }
 
 #flex {
