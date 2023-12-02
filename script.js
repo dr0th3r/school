@@ -1,3 +1,5 @@
+const lectionContainer = document.querySelector(".lection");
+
 texts = {
   1: "",
   2: "",
@@ -9,7 +11,9 @@ texts = {
   19: `Posoudili jste vady motorků. Psali jste omluvu do Jihlavy. Upustili jste od úmyslu jet do Opavy. Import strojů v listopadu poklesl. Koupili jste domek u Kralup. Posoudili jste vady motorků. Import strojů v listopadu poklesl. Posoudili jste vady motorků. Katalog pro galerii tiskla firma Kotek, Plumlov. Posoudili jste vady motorků. Psali jste omluvu do Jihlavy. Upustili jste od úmyslu jet do Opavy. Import strojů v listopadu poklesl. Koupili jste domek u Kralup. Posoudili jste vady motorků. Import strojů v listopadu poklesl. Posoudili jste vady motorků. Katalog pro galerii tiskla firma Kotek, Plumlov. Posoudili jste vady motorků. Psali jste omluvu do Jihlavy. Upustili jste od úmyslu jet do Opavy. Import strojů v listopadu poklesl. Koupili jste domek u Kralup. Posoudili jste vady motorků. Import strojů v listopadu poklesl. Posoudili jste vady motorků. Katalog pro galerii tiskla firma Kotek, Plumlov. Posoudili jste vady motorků. Psali jste omluvu do Jihlavy. Upustili jste od úmyslu jet do Opavy. Import strojů v listopadu poklesl. Koupili jste domek u Kralup. Posoudili jste vady motorků. Import strojů v listopadu poklesl. Posoudili jste vady motorků. Katalog pro galerii tiskla firma Kotek, Plumlov. Posoudili jste vady motorků. Psali jste omluvu do Jihlavy. Upustili jste od úmyslu jet do Opavy. Import strojů v listopadu poklesl. Koupili jste domek u Kralup. Posoudili jste vady motorků. Import strojů v listopadu poklesl.`,
   20: `V diskusi vystoupil p. Sudek. Sledujeme programy divadel. Sledujeme programy divadel. Spory se vyhrotily. Tolerovali jsme postoj kolegů. Sledujeme vliv reklamy v tisku. Studovali jsme status tohoto spolku. Veslovali jsme proti proudu Svitavy. Spory se vyhrotily. Tolerovali jsme postoj kolegů. V diskusi vystoupil p. Sudek. Sledujeme programy divadel. Sledujeme programy divadel. Spory se vyhrotily. Tolerovali jsme postoj kolegů. Sledujeme vliv reklamy v tisku. Studovali jsme status tohoto spolku. Veslovali jsme proti proudu Svitavy. Spory se vyhrotily. Tolerovali jsme postoj kolegů. V diskusi vystoupil p. Sudek. Sledujeme programy divadel. Sledujeme programy divadel. Spory se vyhrotily. Tolerovali jsme postoj kolegů. Sledujeme vliv reklamy v tisku. Studovali jsme status tohoto spolku. Veslovali jsme proti proudu Svitavy. Spory se vyhrotily. Tolerovali jsme postoj kolegů. V diskusi vystoupil p. Sudek. Sledujeme programy divadel. Sledujeme programy divadel. Spory se vyhrotily. Tolerovali jsme postoj kolegů. Sledujeme vliv reklamy v tisku. Studovali jsme status tohoto spolku. Veslovali jsme proti proudu Svitavy. Spory se vyhrotily. Tolerovali jsme postoj kolegů. V diskusi vystoupil p. Sudek. Sledujeme programy divadel. Sledujeme programy divadel. Spory se vyhrotily. Tolerovali jsme postoj kolegů. Sledujeme vliv reklamy v tisku. Studovali jsme status tohoto spolku. Veslovali jsme proti proudu Svitavy. Spory se vyhrotily.`,
   22: `Odeslali jsme dopis, dva vzorky, prospekty a katalog. Rozprodali jste stoly. Odeslali jsme dopis, dva vzorky, prospekty a katalog. Odeslali jsme dopis, dva vzorky, prospekty a katalog. Rozprodali jste stoly. Dostal jste dopis od kolegy z Polska. Rozhodli jste se pro odjezd do Rakouska. Odeslali jsme dopis, dva vzorky, prospekty a katalog. Rozprodali jste stoly. Odeslali jsme dopis, dva vzorky, prospekty a katalog. Odeslali jsme dopis, dva vzorky, prospekty a katalog. Rozprodali jste stoly. Dostal jste dopis od kolegy z Polska. Rozhodli jste se pro odjezd do Rakouska. Odeslali jsme dopis, dva vzorky, prospekty a katalog. Rozprodali jste stoly. Odeslali jsme dopis, dva vzorky, prospekty a katalog. Odeslali jsme dopis, dva vzorky, prospekty a katalog. Rozprodali jste stoly. Dostal jste dopis od kolegy z Polska. Rozhodli jste se pro odjezd do Rakouska. Odeslali jsme dopis, dva vzorky, prospekty a katalog. Rozprodali jste stoly. Odeslali jsme dopis, dva vzorky, prospekty a katalog. Odeslali jsme dopis, dva vzorky, prospekty a katalog. Rozprodali jste stoly. Dostal jste dopis od kolegy z Polska. Rozhodli jste se pro odjezd do Rakouska. Odeslali jsme dopis, dva vzorky, prospekty a katalog. Rozprodali jste stoly. Odeslali jsme dopis, dva vzorky, prospekty a katalog. Odeslali jsme dopis, dva vzorky, prospekty a katalog. Rozprodali jste stoly. Dostal jste dopis od kolegy z Polska. Rozhodli jste se pro odjezd do Rakouska.`,
-  23: `Setkali jsme se tady u mostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Setkali jsme se tady u mostu. Setkali jsme se tady umostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Sledujeme programy divadel. Setkali jsme se tady u mostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Setkali jsme se tady u mostu. Setkali jsme se tady umostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Sledujeme programy divadel. Setkali jsme se tady u mostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Setkali jsme se tady u mostu. Setkali jsme se tady umostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Sledujeme programy divadel. Setkali jsme se tady u mostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Setkali jsme se tady u mostu. Setkali jsme se tady umostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Sledujeme programy divadel. Setkali jsme se tady u mostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Setkali jsme se tady u mostu. Setkali jsme se tady umostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Sledujeme programy divadel. Setkali jsme se tady u mostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku.`
+  23: `Setkali jsme se tady u mostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Setkali jsme se tady u mostu. Setkali jsme se tady umostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Sledujeme programy divadel. Setkali jsme se tady u mostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Setkali jsme se tady u mostu. Setkali jsme se tady umostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Sledujeme programy divadel. Setkali jsme se tady u mostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Setkali jsme se tady u mostu. Setkali jsme se tady umostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Sledujeme programy divadel. Setkali jsme se tady u mostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Setkali jsme se tady u mostu. Setkali jsme se tady umostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Sledujeme programy divadel. Setkali jsme se tady u mostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Setkali jsme se tady u mostu. Setkali jsme se tady umostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku. Sledujeme programy divadel. Setkali jsme se tady u mostu. Veslovali jsme proti proudu Svitavy. Studovali jsme status tohoto spolku.`,
+  24: `vklady vzrostly - poskytli jsme slevu - vklady vzrostly - dali rozkazy - poskytli jsme slevu - rozprodali stolky - poskytli jsme slevu - hledali jsme důkazy - vklady vzrostly - hledali jsme důkazy - rozprodali stolky - hledali vklady vzrostly - poskytli jsme slevu - vklady vzrostly - dali rozkazy - poskytli jsme slevu - rozprodali stolky - poskytli jsme slevu - hledali jsme důkazy - vklady vzrostly - hledali jsme důkazy - rozprodali stolky - hledali vklady vzrostly - poskytli jsme slevu - vklady vzrostly - dali rozkazy - poskytli jsme slevu - rozprodali stolky - poskytli jsme slevu - hledali jsme důkazy - vklady vzrostly - hledali jsme důkazy - rozprodali stolky - hledali vklady vzrostly - poskytli jsme slevu - vklady vzrostly - dali rozkazy - poskytli jsme slevu - rozprodali stolky - poskytli jsme slevu - hledali jsme důkazy - vklady vzrostly - hledali jsme důkazy - rozprodali stolky - hledali vklady vzrostly - poskytli jsme slevu - vklady vzrostly - dali rozkazy - poskytli jsme slevu - rozprodali stolky - poskytli jsme slevu - hledali jsme důkazy - vklady vzrostly - hledali jsme důkazy - rozprodali stolky - hledali vklady vzrostly - poskytli jsme slevu - vklady vzrostly - dali rozkazy - poskytli jsme slevu - rozprodali stolky - poskytli jsme slevu - hledali jsme důkazy - vklady vzrostly - hledali jsme důkazy - rozprodali stolky - hledali vklady vzrostly - poskytli jsme slevu - vklady vzrostly - dali rozkazy`,
+  25: `Pokud chcete partnera zaujmout dopisem, je nutno ho promyslit. Poznamenejte si osnovu. Myslete na stanovisko partnera a jeho argumenty hned vyvracejte. Stylizaci volte úspornou, logickou, srozumitelnou a pravdivou. Neopakujte slova. Svou velkou roli hraje i úprava a pravopis. Podtrhuje to dojem z dopisu. Pokud chcete partnera zaujmout dopisem, je nutno ho promyslit. Poznamenejte si osnovu. Myslete na stanovisko partnera a jeho argumenty hned vyvracejte. Stylizaci volte úspornou, logickou, srozumitelnou a pravdivou. Neopakujte slova. Svou velkou roli hraje i úprava a pravopis. Podtrhuje to dojem z dopisu. Pokud chcete partnera zaujmout dopisem, je nutno ho promyslit. Poznamenejte si osnovu. Myslete na stanovisko partnera a jeho argumenty hned vyvracejte. Stylizaci volte úspornou, logickou, srozumitelnou a pravdivou. Neopakujte slova. Svou velkou roli hraje i úprava a pravopis. Podtrhuje to dojem z dopisu. Pokud chcete partnera zaujmout dopisem, je nutno ho promyslit. Poznamenejte si osnovu. Myslete na stanovisko partnera a jeho argumenty hned vyvracejte. Stylizaci volte úspornou, logickou, srozumitelnou a pravdivou. Neopakujte slova. Svou velkou roli hraje i úprava a pravopis. Podtrhuje to dojem z dopisu. Pokud chcete partnera zaujmout dopisem, je nutno ho promyslit. Poznamenejte si osnovu. Myslete na stanovisko partnera a jeho argumenty hned vyvracejte. Stylizaci volte úspornou, logickou, srozumitelnou a pravdivou.`,
 };
 
 letters = {
@@ -21,9 +25,36 @@ letters = {
   17: ["p"],
   18: ["."],
   19: ["K"],
+  20: ["K"], //truly shift left to reimplement later
+  21: ["K"], //truly it is testing but left to reimplement later
+  22: ["z", "-"],
+  23: ["c"],
+  24: ["-"], //opak
+  25: ["n"],
 };
 
+console.log(texts);
+
+function renderLectionList() {
+  const lections = Object.keys(texts);
+
+  const lastLection = lections[lections.length - 1];
+
+  for (const lection of lections) {
+    const lectionEl = document.createElement("option");
+    lectionEl.value = lection;
+    lectionEl.textContent = `Lekce ${lection} {${letters[lection]}}`;
+    lection === lastLection && (lectionEl.selected = true);
+
+    console.log(lection === lastLection);
+
+    lectionContainer.append(lectionEl);
+  }
+}
+
 function getRandomArrayEl(array) {
+  console.log(array);
+
   return array[Math.floor(Math.random() * array.length)];
 }
 
@@ -158,6 +189,7 @@ function generateResults() {
   )}`;
 }
 
+renderLectionList();
 generateResults();
 
 console.log(" ".repeat(15) + "test");
